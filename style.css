@@ -1,0 +1,19 @@
+h1{
+    color: white;
+    margin-left: 40px;
+}
+
+.subtitulo {
+    color: white;
+    margin-left: 40px;
+}
+
+
+.main-container {
+    border: 1px solid rgb(10, 173, 10);
+    height: 600px;
+    width: 30%;
+    display: flex;
+    margin-left: 55%;
+    margin-top: -2%;
+}
