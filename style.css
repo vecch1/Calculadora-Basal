@@ -1,19 +1,29 @@
 h1{
     color: white;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .subtitulo {
     color: white;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 
 .main-container {
-    border: 1px solid rgb(10, 173, 10);
-    height: 600px;
-    width: 30%;
+    border: 3px solid rgb(252, 248, 248);
+    height: 530px;
+    width: 44%;
     display: flex;
     margin-left: 55%;
-    margin-top: -2%;
+    margin-top: -72%;
+    background-color: rgba(124, 121, 121, 0.896);
+}
+
+.img-corrida, .img-salada, .img-balança, .img-academia{
+    height: 15%;
+    width: 18%;
+}
+
+.titulo-main {
+    margin-left: 8px;
 }
