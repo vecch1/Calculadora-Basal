@@ -28,7 +28,61 @@
        </div>
         <main class="main-container">
             <!-- inputs e checkbox  -->
-            <h2 class="titulo-main">Calcule sua Taxa Metabólica Basal (TMB)</h2>
+            <div class="titulo-box"> <h2 class="titulo-main">Calcule sua Taxa Metabólica Basal (TMB)</h2></div>
+            <div class="gender-box">
+                <ul class="gender-selection">
+                    <li>
+                        <input type="checkbox"
+                        id="Homem"
+                        name="Homem[]"
+                        value="Homem">
+                        <label for="Homem">Homem</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"
+                        id="Mulher"
+                        name="Mulher[]"
+                        value="Mulher">
+                        <label for="Mulher">Homem</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="altura">
+                <label for="Height">Altura <span class="required-field">"</span></label>
+                <input 
+                type="text"
+                name="Altura"
+                id="Altura"
+                class="block"
+                placeholder="Defina sua altura"
+                required>
+            </div>
+            <div class="Peso">
+                <label for="Weight">Altura <span class="required-field">"</span></label>
+                <input 
+                type="number"
+                name="Peso"
+                id="Peso"
+                class="block"
+                placeholder="Defina sua Peso"
+                required>
+            </div>
+            <div class="">
+                <label for="Age">Idade<span class="required-field">"</span></label>
+                <input type="number"
+                name="Idade"
+                id="Idade"
+                class="block"
+                placeholder="Defina sua Idade"
+                required>
+            </div>
+            <div class="result">
+                <label for="Result">Resultado</label>
+                <input type="number"
+                name="resultado"
+                id="resultado"
+                placeholder="Seu gasto calorico ">
+            </div>
         </main>
     </div>
     
