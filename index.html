@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body background="img/fundo-abstrato-da-aguarela_1473-67.png">
+<body>
     <div class="container">
+        <div class="img-container">
         <div class="titulo">
             <h1>Calculadora basal</h1>
             <h3 class="subtitulo">Descubra quantas calorias seu corpo gasta diariamente!!</h3>
         </div>
         <!-- imagens -->
+       <div class="row">
        <div class="box">
         <img src="img/academia.webp" alt="academia"  class="img-academia">
        </div>
        <div class="box">
         <img src="img/balança peso.webp" alt="balança" class="img-balança">
-       </div>
+        </div>
+       </div> 
+     <div class="row">
        <div class="box1">
         <img src="img/salada.jpeg" alt="salada" class="img-salada">
        </div>
        <div class="box1">
         <img src="img/corrida.jpeg" alt="corrida" class="img-corrida">
        </div>
+    </div>
+    </div>
         <main class="main-container">
+           <div class="text-container">
             <!-- inputs e checkbox  -->
             <div class="titulo-box"> <h2 class="titulo-main">Calcule sua Taxa Metabólica Basal (TMB)</h2></div>
             <div class="gender-box">
@@ -43,7 +50,7 @@
                         id="Mulher"
                         name="Mulher[]"
                         value="Mulher">
-                        <label for="Mulher">Homem</label>
+                        <label for="Mulher">Mulher</label>
                     </li>
                 </ul>
             </div>
@@ -58,7 +65,7 @@
                 required>
             </div>
             <div class="Peso">
-                <label for="Weight">Altura <span class="required-field">"</span></label>
+                <label for="Weight">Peso<span class="required-field">"</span></label>
                 <input 
                 type="number"
                 name="Peso"
@@ -67,7 +74,7 @@
                 placeholder="Defina sua Peso"
                 required>
             </div>
-            <div class="">
+            <div class="idade">
                 <label for="Age">Idade<span class="required-field">"</span></label>
                 <input type="number"
                 name="Idade"
@@ -76,6 +83,9 @@
                 placeholder="Defina sua Idade"
                 required>
             </div>
+            <div class="btn-container">
+                <button type="button">   Calcule    </button>
+            </div>
             <div class="result">
                 <label for="Result">Resultado</label>
                 <input type="number"
@@ -83,6 +93,7 @@
                 id="resultado"
                 placeholder="Seu gasto calorico ">
             </div>
+        </div>
         </main>
     </div>
     
