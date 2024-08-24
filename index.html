@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Basal</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -38,14 +38,14 @@
             <div class="titulo-box"> <h2 class="titulo-main">Calcule sua Taxa Metabólica Basal (TMB)</h2></div>
             <div class="gender-box">
                 <ul class="gender-selection">
-                    <li>
+                    <li class="hover">
                         <input type="checkbox"
                         id="Homem"
                         name="Homem[]"
                         value="Homem">
                         <label for="Homem">Homem</label>
                     </li>
-                    <li>
+                    <li  class="hover">
                         <input type="checkbox"
                         id="Mulher"
                         name="Mulher[]"
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="altura">
+            <div class="altura" id="Height">
                 <label for="Height">Altura <span class="required-field">"</span></label>
                 <input 
                 type="text"
@@ -64,7 +64,7 @@
                 placeholder="Defina sua altura"
                 required>
             </div>
-            <div class="Peso">
+            <div class="Peso" id="Weight">
                 <label for="Weight">Peso<span class="required-field">"</span></label>
                 <input 
                 type="number"
@@ -74,7 +74,7 @@
                 placeholder="Defina sua Peso"
                 required>
             </div>
-            <div class="idade">
+            <div class="idade" id="Age">
                 <label for="Age">Idade<span class="required-field">"</span></label>
                 <input type="number"
                 name="Idade"
@@ -83,12 +83,12 @@
                 placeholder="Defina sua Idade"
                 required>
             </div>
-            <div class="btn-container">
-                <button type="button">   Calcule    </button>
+            <div class="btn-container" id="Btn">
+                <button type="button" onclick="calcularBasal()">   Calcule    </button>
             </div>
-            <div class="result">
+            <div class="result" id="Result">
                 <label for="Result">Resultado</label>
-                <input type="number"
+                <input type="text"
                 name="resultado"
                 id="resultado"
                 placeholder="Seu gasto calorico ">
@@ -99,3 +99,64 @@
     
 </body>
 </html>
+
+
+
+
+
+<script>// checkbox
+    document.addEventListener("DOMContentLoaded", () => {
+    
+        const manCheckbox = document.querySelector("#Homem");
+        const womanCheckbox = document.querySelector("#Mulher");
+    
+    
+        manCheckbox.addEventListener("change", function(){
+    
+            if(manCheckbox.checked){
+                womanCheckbox.checked = false;
+            }
+        });
+    
+        womanCheckbox.addEventListener("change", function(){
+            if(womanCheckbox.checked){
+                manCheckbox.checked = false;
+            }
+    
+        });
+    
+    
+    
+        function calcularBasal(){
+            const Altura = document.getElementById("Height").value;
+            const Peso = document.getElementById("Weight").value;
+            const Idade = document.getElementById("Age").value;
+            var btnResult = document.getElementById("Btn");
+            const Resultado = document.getElementById("Result").value;
+        
+           //  converter valor em num
+           const alturaNum = Number(Altura);
+           const pesoNum = Number(Peso);
+           const idadeNum = Number(Idade);
+        
+           let Basal
+           if(manCheckbox.checked === true){
+               Basal = 66 + (13.7 * pesoNum) + (5 * alturaNum) - (6.8 * idadeNum);
+           } else if (womanCheckbox === true){
+               Basal = 655 + (9.6 * pesoNum) + (1.8 * alturaNum) - (4.7 * idadeNum);
+           };
+           
+        
+           
+        
+        }
+        
+        
+    });
+    
+    
+    
+    
+    
+        // Para homens: TMB = 66 + (13,7 x peso em kg) + (5 x altura em cm) - (6,8 x idade em anos)
+        // Para mulheres: TMB = 655 + (9,6 x peso em kg) + (1,8 x altura em cm) - (4,7 x idade em anos)</script>
