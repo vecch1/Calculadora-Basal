@@ -59,7 +59,6 @@
                 <input 
                 type="text"
                 name="Altura"
-                id="Altura"
                 class="block"
                 placeholder="Defina sua altura"
                 required>
@@ -69,7 +68,6 @@
                 <input 
                 type="number"
                 name="Peso"
-                id="Peso"
                 class="block"
                 placeholder="Defina sua Peso"
                 required>
@@ -78,20 +76,17 @@
                 <label for="Age">Idade<span class="required-field">"</span></label>
                 <input type="number"
                 name="Idade"
-                id="Idade"
                 class="block"
                 placeholder="Defina sua Idade"
                 required>
             </div>
-            <div class="btn-container" id="btn-submit">
-                <button >  calcule  </button>
+            <div class="btn-container" >
+                <button  onclick="calcularBasal()" id="btn-submit" >  calcule  </button>
             </div>
-            <div class="result" id="Result">
+            <div class="result" id="Resultado" >
                 <label for="Result">Resultado</label>
                 <input type="text"
-                name="resultado"
-                id="resultado"
-                placeholder="Seu gasto calorico ">
+                name="resultado">
             </div>
         </div>
         </main>
