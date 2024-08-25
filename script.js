@@ -1,54 +1,40 @@
 // checkbox
-document.addEventListener("DOMContentLoaded", () => {
+    let manCheckbox = document.querySelector("#Homem");
+    let womanCheckbox = document.querySelector("#Mulher");
+    let Altura = document.getElementById("Height");
+    let Peso = document.getElementById("Weight");
+    let Idade = document.getElementById("Age");
+    let Resultado = document.getElementById("Result");
+    let btn = document.getElementById("btn-submit")
+   // const Botão = document.getElementById("Btn-submit")
 
-    const manCheckbox = document.querySelector("#Homem");
-    const womanCheckbox = document.querySelector("#Mulher");
-
-
-    manCheckbox.addEventListener("change", function(){
-
+    manCheckbox.addEventListener("change", () => {
         if(manCheckbox.checked){
             womanCheckbox.checked = false;
+            
         }
     });
-
     womanCheckbox.addEventListener("change", function(){
         if(womanCheckbox.checked){
             manCheckbox.checked = false;
         }
+       });
 
-    });
+      
+      
 
-
-
-    function calcularBasal(){
-        const Altura = document.getElementById("Height").value;
-        const Peso = document.getElementById("Weight").value;
-        const Idade = document.getElementById("Age").value;
-        var btnResult = document.getElementById("Btn");
-        const Resultado = document.getElementById("Result").value;
+   
     
-       //  converter valor em num
-       const alturaNum = Number(Altura);
-       const pesoNum = Number(Peso);
-       const idadeNum = Number(Idade);
-    
-       let Basal
-       if(manCheckbox.checked === true){
-           Basal = 66 + (13.7 * pesoNum) + (5 * alturaNum) - (6.8 * idadeNum);
-       } else if (womanCheckbox === true){
-           Basal = 655 + (9.6 * pesoNum) + (1.8 * alturaNum) - (4.7 * idadeNum);
-       };
-       
-    
-       
-    
-    }
-    
-    
-});
-
-
+        
+        btn.addEventListener("click", () => {
+        if(manCheckbox.checked){
+            Resultado = 66 + (13.7 * Peso.value) + (5 * Altura.value) - (6.8 * Idade.value);
+        } else {
+            Resultado = 655 + (9.6 * Peso.value) + (1.8 * Altura.value) - (4.7 * Idade.value);
+        }})
+        
+        
+     console.log(Resultado.value)
 
 
 
