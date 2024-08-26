@@ -54,39 +54,43 @@
                     </li>
                 </ul>
             </div>
-            <div class="altura" id="Height">
+            <div class="altura" >
                 <label for="Height">Altura <span class="required-field">"</span></label>
                 <input 
                 type="text"
+                id="Height"
                 name="Altura"
                 class="block"
                 placeholder="Defina sua altura"
                 required>
             </div>
-            <div class="Peso" id="Weight">
+            <div class="Peso" >
                 <label for="Weight">Peso<span class="required-field">"</span></label>
                 <input 
                 type="number"
                 name="Peso"
                 class="block"
                 placeholder="Defina sua Peso"
+                id="Weight"
                 required>
             </div>
-            <div class="idade" id="Age">
+            <div class="idade" >
                 <label for="Age">Idade<span class="required-field">"</span></label>
                 <input type="number"
                 name="Idade"
                 class="block"
                 placeholder="Defina sua Idade"
+                id="Age"
                 required>
             </div>
             <div class="btn-container" >
                 <button  onclick="calcularBasal()" id="btn-submit" >  calcule  </button>
             </div>
-            <div class="result" id="Resultado" >
-                <label for="Result">Resultado</label>
-                <input type="text"
-                name="resultado">
+            <div class="result">
+                <p></p>
+            </div>
+            <div  id="instrucoes">
+                <h4>*Adicione sua altura como numero inteiro  ex: 180.</h3>
             </div>
         </div>
         </main>
