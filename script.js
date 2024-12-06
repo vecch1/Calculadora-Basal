@@ -6,7 +6,6 @@
     // let Idade = document.getElementById("Age");
     // let Result = document.getElementById("Resultado");
     // let btn = document.getElementById("btn-submit")
-  
 
 
 
@@ -32,17 +31,29 @@
     const Idade = parseFloat(document.getElementById("Age").value)
 
 
+    
+
+
     if (isNaN(Altura) || isNaN(Peso) || isNaN(Idade)) {
         alert("Por favor, preencha todos os campos com números válidos.");
         return;
       }
 
+
+
+      let alturaEmCm = Altura;
+    if (Altura < 3) {
+        alturaEmCm = Altura * 100; // Converte de metros para centímetros
+    }
+
+
+
       let Resultado
         
          if(manCheckbox.checked){
-              Resultado = 88.362 + (13.397 * Peso) + (4.799 * Altura) - (5.677 * Idade);
+              Resultado = 88.362 + (13.397 * Peso) + (4.799 * alturaEmCm) - (5.677 * Idade);
          } else if (womanCheckbox.checked){
-              Resultado = 447.593 + (9.247 * Peso) + (3.098 * Altura) - (4.330 * Idade);
+              Resultado = 447.593 + (9.247 * Peso) + (3.098 * alturaEmCm) - (4.330 * Idade);
         } else {
               alert("Selecione um genero")
               return;

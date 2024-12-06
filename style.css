@@ -18,6 +18,11 @@ h1{
     margin-left: 20px;
 }
 
+
+::-webkit-input-placeholder {
+    color: rgb(42, 41, 41);
+ }
+
 .img-container {
     display: flex;
     flex-direction: column;
@@ -94,12 +99,5 @@ li {
 } 
 
 
-#instrucoes{
-  width: 180px;
-  color: rgb(230, 42, 42);
-  margin-top: 156px;
-  margin-left: 470px;
-  
-}
 
 
